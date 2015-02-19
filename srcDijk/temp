@@ -1,0 +1,30 @@
+g++ -c -Wall -g -I./include -c -o obj/VdcMapping.o src/VdcMapping.cc
+src/VdcMapping.cc: In member function ‘double VdcMapping::getRes(std::vector<std::vector<int> >, std::vector<std::vector<int> >, std::vector<std::vector<int> >, std::vector<std::vector<std::vector<bool> > >, std::vector<BaseDemand>, std::vector<BaseVDC>, std::vector<BaseVlink>, std::vector<BaseVertex>, std::vector<std::vector<double> >, Graph*)’:
+src/VdcMapping.cc:173:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < avaC.size(); i++) {
+                               ^
+src/VdcMapping.cc:180:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i = 0; i < avaB.size(); i++) {
+                               ^
+src/VdcMapping.cc:189:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int d = 0; d < D.size(); d++, iter_demand++) {
+                            ^
+src/VdcMapping.cc:191:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int v = 0; v < VDC.size(); v++, iter_vdc++) {
+                               ^
+src/VdcMapping.cc:194:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for(int n = 0; n < node.size(); n ++, iter_node++) {
+                                   ^
+src/VdcMapping.cc:238:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for(int n2 = 0; n2 < node.size(); n2++, iter_n2++) {
+                                     ^
+src/VdcMapping.cc:250:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      for(int l = 0; l < VL.size(); l++, iter_vlink++) {
+                                 ^
+src/VdcMapping.cc:321:28: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int d = 0; d < D.size(); d++, iter_demand++) {
+                            ^
+src/VdcMapping.cc:322:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int v = 0; v < VDC.size(); v++, iter_vdc++) {
+                               ^
+g++ -o main obj/DijkstraShortestPathAlg.o obj/Graph.o obj/Inputs.o obj/main.o obj/VdcMapping.o
